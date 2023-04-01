@@ -1,0 +1,124 @@
+package br.com.ienh.sisescola.app;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import br.com.ienh.sisescola.dao.AlunoDAO;
+import br.com.ienh.sisescola.dao.ContatoDAO;
+import br.com.ienh.sisescola.dao.ProfessorDAO;
+import br.com.ienh.sisescola.dao.TurmaDAO;
+import br.com.ienh.sisescola.entidades.Aluno;
+import br.com.ienh.sisescola.entidades.Contato;
+import br.com.ienh.sisescola.entidades.Professor;
+import br.com.ienh.sisescola.entidades.Turma;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
+
+public class App {
+
+
+	public static void main(String[] args) {
+		
+		try {
+			// AlunoDAO alunoDAO = new AlunoDAO();
+			
+			// Aluno aluno = new Aluno();
+			// aluno.setNome("Luna");
+			// aluno.setNumeroMatricula("2162185");
+			// aluno.setCpf("54789593545");
+			// aluno.setEndereco("Rua Osvaldo Cruz, 80");
+			// aluno.setNascimento(LocalDate.of(2001, 6, 28));
+			// alunoDAO.insert(aluno);
+
+			// ContatoDAO contatoDAO = new ContatoDAO();
+
+			// Contato contato = new Contato();
+			// contato.setAluno(aluno);
+			// contato.setDescricao("996869587");
+			// contato.setTipo("email");
+			// contatoDAO.insert(contato);
+
+			ProfessorDAO professorDAO = new ProfessorDAO();
+			Professor professor = new Professor();
+			professor.setNome("Tiago");
+			professorDAO.insert(professor);
+
+			// TurmaDAO turmaDAO = new TurmaDAO();
+
+			// Turma turma = new Turma();
+			// turma.setSemestre("2");
+			// turma.setProfessor(professor);
+			// turmaDAO.insert(turma);
+			
+		} catch (Exception e) {
+			System.out.println("Ops! Ocorreu um erro na conexão com o banco.");
+		}
+
+//			Aluno aluno = alunoDAO.findById(2);
+//			System.out.println(aluno.getNome());
+			
+//			List<Aluno> alunos = alunoDAO.findAll();
+//			for (Aluno i : alunos) {
+//				System.out.println(i.getNome());
+//			}
+//		
+//		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SisEscola");
+//	    EntityManager entityManager = entityManagerFactory.createEntityManager();
+//	    
+	    // BUSCAR
+//	    Aluno aluno = entityManager.find(Aluno.class, 1);
+//	    System.out.println(aluno.getNome());
+//	    
+//	    List<Contato> contatos = aluno.getContatos();
+//	    
+//	    for (Contato contato : contatos) {
+//	    	System.out.println(contato.getDescricao());
+//	    }
+//	    
+//	    // INSERIR
+//	    Aluno novoAluno = new Aluno();
+//	    novoAluno.setNome("Julia");
+//	    novoAluno.setNumeroMatricula("7168152");
+//	    novoAluno.setCpf("52394891254");
+//	    novoAluno.setEndereco("rua dos alpes, 70");
+//	    novoAluno.setNascimento(LocalDate.of(1999, 3, 22));
+//	    
+//	    Contato contato1 = new Contato();
+//	    contato1.setAluno(novoAluno);
+//	    contato1.setDescricao("987741256");
+//	    contato1.setTipo("telefone");
+//	    
+//	    Contato contato2 = new Contato();
+//	    contato2.setAluno(novoAluno);
+//	    contato2.setDescricao("gui@mail.com");
+//	    contato2.setTipo("email"); 
+//	    
+//	    novoAluno.getContatos().add(contato1);
+//	    novoAluno.getContatos().add(contato2);	 
+//	    
+//	    entityManager.getTransaction().begin();
+//	    entityManager.persist(novoAluno);
+//	    entityManager.getTransaction().commit();
+//	    
+	    // CONSULTA
+//	    String consulta = "from Aluno";
+//	    Query query = entityManager.createQuery(consulta);
+//	    
+//	    List<Aluno> alunos = query.getResultList();
+//	    
+//	    for (Aluno aluno : alunos) {
+//	    	System.out.println(aluno.getNome());
+//	    }
+//	    
+	    // DELETAR
+//	    Aluno aluno = entityManager.find(Aluno.class, 1);
+//	    
+//	    entityManager.getTransaction().begin();
+//	    entityManager.remove(aluno);
+//	    entityManager.getTransaction().commit();
+//
+	}
+
+}
