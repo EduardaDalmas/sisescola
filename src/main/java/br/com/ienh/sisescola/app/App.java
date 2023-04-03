@@ -22,23 +22,23 @@ public class App {
 		try {
 			AlunoDAO alunoDAO = new AlunoDAO();
 			Aluno aluno = new Aluno();
-			aluno.setNome("Luna");
-			aluno.setNumeroMatricula("2162185");
-			aluno.setCpf("54789593545");
-			aluno.setEndereco("Rua Osvaldo Cruz, 80");
-			aluno.setNascimento(LocalDate.of(2001, 6, 28));
+			aluno.setNome("Eduarda");
+			aluno.setNumeroMatricula("2162735");
+			aluno.setCpf("04198579075");
+			aluno.setEndereco("Rua Amantino Petefi, 45");
+			aluno.setNascimento(LocalDate.of(2001, 5, 14));
 			alunoDAO.insert(aluno);
 
 			ContatoDAO contatoDAO = new ContatoDAO();
 			Contato contato = new Contato();
 			contato.setAluno(aluno);
-			contato.setDescricao("996869587");
-			contato.setTipo("email");
+			contato.setDescricao("999002828");
+			contato.setTipo("telefone");
 			contatoDAO.insert(contato);
 
 			ProfessorDAO professorDAO = new ProfessorDAO();
 			Professor professor = new Professor();
-			professor.setNome("Andre");
+			professor.setNome("Joao");
 			professorDAO.insert(professor);
 
 			TurmaDAO turmaDAO = new TurmaDAO();

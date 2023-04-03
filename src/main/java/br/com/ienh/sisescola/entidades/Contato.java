@@ -21,14 +21,6 @@ public class Contato {
 	@ManyToOne(cascade=(CascadeType.ALL))
 	@JoinColumn(name="aluno_id")
 	private Aluno aluno;
-	
-	public Aluno getAluno() {
-		return aluno;
-	}
-
-	public void setAluno(Aluno aluno) {
-		this.aluno = aluno;
-	}
 
 	public Contato() {}
 
@@ -56,6 +48,12 @@ public class Contato {
 		this.tipo = tipo;
 	}
 	
-	
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
 
 }
