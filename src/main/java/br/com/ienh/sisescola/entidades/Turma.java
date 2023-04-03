@@ -28,24 +28,7 @@ public class Turma {
 	@JoinTable(name="aluno_turma", 
 			   joinColumns = @JoinColumn(name="turma_id"), 
 			   inverseJoinColumns = @JoinColumn(name="aluno_id"))
-
-	public Professor getProfessor() {
-		return professor;
-	}
-
-	public void setProfessor(Professor professor) {
-		this.professor = professor;
-	}
-		
 	private List<Aluno> alunos;
-	
-	public List<Aluno> getAlunos() {
-		return alunos;
-	}
-
-	public void setAlunos(List<Aluno> alunos) {
-		this.alunos = alunos;
-	}
 
 	public Turma() {}
 
@@ -63,5 +46,22 @@ public class Turma {
 
 	public void setSemestre(String semestre) {
 		this.semestre = semestre;
+	}
+
+	public Professor getProfessor() {
+		return professor;
+	}
+
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
+	
+	
+	public List<Aluno> getAlunos() {
+		return alunos;
+	}
+
+	public void setAlunos(List<Aluno> alunos) {
+		this.alunos = alunos;
 	}
 }

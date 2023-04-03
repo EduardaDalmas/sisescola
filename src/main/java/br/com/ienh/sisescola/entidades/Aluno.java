@@ -37,21 +37,6 @@ public class Aluno {
 			   inverseJoinColumns = @JoinColumn(name="turma_id"))
 	private List<Turma> turmas;
 	
-	public List<Turma> getTurmas() {
-		return turmas;
-	}
-
-	public void setTurmas(List<Turma> turmas) {
-		this.turmas = turmas;
-	}
-
-	public List<Contato> getContatos() {
-		return contatos;
-	}
-
-	public void setContatos(List<Contato> contatos) {
-		this.contatos = contatos;
-	}
 
 	public Aluno() {
 		contatos = new ArrayList<Contato>();
@@ -103,6 +88,22 @@ public class Aluno {
 
 	public void setNascimento(LocalDate nascimento) {
 		this.nascimento = nascimento;
+	}
+
+	public List<Contato> getContatos() {
+		return contatos;
+	}
+
+	public void setContatos(List<Contato> contatos) {
+		this.contatos = contatos;
+	}
+
+	public List<Turma> getTurmas() {
+		return turmas;
+	}
+
+	public void setTurmas(List<Turma> turmas) {
+		this.turmas = turmas;
 	}
 	
 }
