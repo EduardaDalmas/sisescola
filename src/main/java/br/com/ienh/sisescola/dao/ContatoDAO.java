@@ -1,7 +1,5 @@
 package br.com.ienh.sisescola.dao;
-
 import java.util.List;
-
 import br.com.ienh.sisescola.entidades.Contato;
 import jakarta.persistence.Query;
 
