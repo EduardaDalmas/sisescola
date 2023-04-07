@@ -115,16 +115,16 @@ public class App {
 			// entityManager.getTransaction().commit();
 
 			// curso_disciplina
-			CursoDAO cursoDAO = new CursoDAO();
-			Curso curso = cursoDAO.findById(1);
+			// CursoDAO cursoDAO = new CursoDAO();
+			// Curso curso = cursoDAO.findById(1);
 
-			DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
-			Disciplina disciplina = disciplinaDAO.findById(1);
-			disciplina.getCursos().add(curso);
+			// DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
+			// Disciplina disciplina = disciplinaDAO.findById(1);
+			// disciplina.getCursos().add(curso);
 
-			entityManager.getTransaction().begin();
-			entityManager.merge(disciplina);
-			entityManager.getTransaction().commit();
+			// entityManager.getTransaction().begin();
+			// entityManager.merge(disciplina);
+			// entityManager.getTransaction().commit();
 			
 		} catch (Exception e) {
 			System.out.println("Ops! Ocorreu um erro na conexão com o banco.");
