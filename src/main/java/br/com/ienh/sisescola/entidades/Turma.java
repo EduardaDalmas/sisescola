@@ -21,9 +21,11 @@ public class Turma {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String semestre;
+
 	@ManyToOne(cascade=(CascadeType.ALL))
 	@JoinColumn(name="professor_id")
 	private Professor professor;
+	
 	@ManyToMany
 	@JoinTable(name="aluno_turma", 
 			   joinColumns = @JoinColumn(name="turma_id"), 
@@ -69,5 +71,13 @@ public class Turma {
 
 	public void setAlunos(List<Aluno> alunos) {
 		this.alunos = alunos;
+	}
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 }
