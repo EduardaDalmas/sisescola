@@ -71,8 +71,8 @@ public class App {
 
 			DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
 			Disciplina disciplina = new Disciplina();
-			disciplina.setNome("Programação II");
-			disciplina.setCodigo("789785");
+			disciplina.setNome("Programação III");
+			disciplina.setCodigo("789885");
 			disciplinaDAO.insert(disciplina);
 			
 			

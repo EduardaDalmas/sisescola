@@ -26,6 +26,12 @@ public class Disciplina {
 			   inverseJoinColumns = @JoinColumn(name="turma_id"))
 	private List<Turma> turmas;
 
+    @ManyToMany
+	@JoinTable(name="curso_disciplina", 
+			   joinColumns = @JoinColumn(name="disciplina_id"), 
+			   inverseJoinColumns = @JoinColumn(name="curso_id"))
+	private List<Curso> cursos;
+
     public int getId() {
         return id;
     }
@@ -56,6 +62,14 @@ public class Disciplina {
 
     public void setTurmas(List<Turma> turmas) {
         this.turmas = turmas;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
     }
 
 }
