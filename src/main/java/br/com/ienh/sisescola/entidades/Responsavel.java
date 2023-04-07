@@ -21,7 +21,7 @@ public class Responsavel {
 	@JoinTable(name = "aluno_responsavel",
 			joinColumns = @JoinColumn(name="responsavel_id"),
 			inverseJoinColumns = @JoinColumn(name="aluno_id"))
-	private List<Aluno> alunos;
+    private List<Aluno> alunos;
 
     public int getId() {
         return id;
@@ -53,7 +53,5 @@ public class Responsavel {
 
     public void setAlunos(List<Aluno> alunos) {
         this.alunos = alunos;
-    }
-
-	
+    }	
 }

@@ -26,21 +26,21 @@ public class App {
 	public static void main(String[] args) {
 		
 		try {
-			// AlunoDAO alunoDAO = new AlunoDAO();
-			// Aluno aluno = new Aluno();
-			// aluno.setNome("Eduarda");
-			// aluno.setNumeroMatricula("2162735");
-			// aluno.setCpf("04198579075");
-			// aluno.setEndereco("Rua Amantino Petefi, 45");
-			// aluno.setNascimento(LocalDate.of(2001, 5, 14));
-			// alunoDAO.insert(aluno);
+			AlunoDAO alunoDAO = new AlunoDAO();
+			Aluno aluno = new Aluno();
+			aluno.setNome("Julia");
+			aluno.setNumeroMatricula("2163235");
+			aluno.setCpf("98533579075");
+			aluno.setEndereco("Rua 19 de novembro, 20");
+			aluno.setNascimento(LocalDate.of(1999, 7, 30));
+			alunoDAO.insert(aluno);
 
-			// Aluno aluno = alunoDAO.findById(1);
+			// Aluno aluno = alunoDAO.findById(14);
 
 			// ContatoDAO contatoDAO = new ContatoDAO();
 			// Contato contato = new Contato();
 			// contato.setAluno(aluno);
-			// contato.setDescricao("999002828");
+			// contato.setDescricao("995602828");
 			// contato.setTipo("telefone");
 			// contatoDAO.insert(contato);
 
@@ -57,11 +57,11 @@ public class App {
 			// turma.setProfessor(professor);
 			// turmaDAO.insert(turma);
 
-			// ResponsavelDAO responsavelDAO = new ResponsavelDAO();
-			// Responsavel responsavel = new Responsavel();
-			// responsavel.setNome("Maria de Lurdes");
-			// responsavel.setEndereco("rua dos Andradas, 730");
-			// responsavelDAO.insert(responsavel);
+			ResponsavelDAO responsavelDAO = new ResponsavelDAO();
+			Responsavel responsavel = new Responsavel();
+			responsavel.setNome("Rita de Cassia");
+			responsavel.setEndereco("rua Coronel Travasso, 30");
+			responsavelDAO.insert(responsavel);
 
 			// CursoDAO cursoDAO = new CursoDAO();
 			// Curso curso = new Curso();
@@ -69,11 +69,12 @@ public class App {
 			// curso.setCoordenador("Daniel Dalalana");
 			// cursoDAO.insert(curso);
 
-			DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
-			Disciplina disciplina = new Disciplina();
-			disciplina.setNome("Programação I");
-			disciplina.setCodigo("789585");
-			disciplinaDAO.insert(disciplina);
+			// DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
+			// Disciplina disciplina = new Disciplina();
+			// disciplina.setNome("Programação I");
+			// disciplina.setCodigo("789585");
+			// disciplinaDAO.insert(disciplina);
+			
 			
 		} catch (Exception e) {
 			System.out.println("Ops! Ocorreu um erro na conexão com o banco.");

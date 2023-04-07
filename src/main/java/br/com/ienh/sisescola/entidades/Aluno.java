@@ -37,6 +37,11 @@ public class Aluno {
 			   inverseJoinColumns = @JoinColumn(name="turma_id"))
 	private List<Turma> turmas;
 	
+	@ManyToMany
+	@JoinTable(name = "aluno_responsavel",
+	joinColumns = @JoinColumn(name="aluno_id"),
+	inverseJoinColumns = @JoinColumn(name="responsavel_id"))
+	private List<Responsavel> responsaveis;
 
 	public Aluno() {
 		contatos = new ArrayList<Contato>();
