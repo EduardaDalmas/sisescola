@@ -1,9 +1,12 @@
 package br.com.ienh.sisescola.entidades;
-
+import java.util.List;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +17,11 @@ public class Responsavel {
 	private int id;
 	private String nome;
     private String endereco;
+    @ManyToMany
+	@JoinTable(name = "aluno_responsavel",
+			joinColumns = @JoinColumn(name="responsavel_id"),
+			inverseJoinColumns = @JoinColumn(name="aluno_id"))
+	private List<Aluno> alunos;
 
     public int getId() {
         return id;
@@ -37,6 +45,14 @@ public class Responsavel {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
 
 	
