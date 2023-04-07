@@ -30,6 +30,12 @@ public class Turma {
 			   inverseJoinColumns = @JoinColumn(name="aluno_id"))
 	private List<Aluno> alunos;
 
+	@ManyToMany
+	@JoinTable(name="disciplina_turma", 
+			   joinColumns = @JoinColumn(name="turma_id"), 
+			   inverseJoinColumns = @JoinColumn(name="disciplina_id"))
+	private List<Disciplina> disciplinas;
+
 	public Turma() {}
 
 	public int getId() {

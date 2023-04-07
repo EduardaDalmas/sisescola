@@ -26,42 +26,42 @@ public class App {
 	public static void main(String[] args) {
 		
 		try {
-			AlunoDAO alunoDAO = new AlunoDAO();
-			Aluno aluno = new Aluno();
-			aluno.setNome("Julia");
-			aluno.setNumeroMatricula("2163235");
-			aluno.setCpf("98533579075");
-			aluno.setEndereco("Rua 19 de novembro, 20");
-			aluno.setNascimento(LocalDate.of(1999, 7, 30));
-			alunoDAO.insert(aluno);
+			// AlunoDAO alunoDAO = new AlunoDAO();
+			// Aluno aluno = new Aluno();
+			// aluno.setNome("Julia");
+			// aluno.setNumeroMatricula("2163235");
+			// aluno.setCpf("98533579075");
+			// aluno.setEndereco("Rua 19 de novembro, 20");
+			// aluno.setNascimento(LocalDate.of(1999, 7, 30));
+			// alunoDAO.insert(aluno);
 
 			// Aluno aluno = alunoDAO.findById(14);
 
 			// ContatoDAO contatoDAO = new ContatoDAO();
 			// Contato contato = new Contato();
 			// contato.setAluno(aluno);
-			// contato.setDescricao("995602828");
+			// contato.setDescricao("998542828");
 			// contato.setTipo("telefone");
 			// contatoDAO.insert(contato);
 
-			//ProfessorDAO professorDAO = new ProfessorDAO();
+			// ProfessorDAO professorDAO = new ProfessorDAO();
 			// Professor professor = new Professor();
 			// professor.setNome("Joao");
 			// professorDAO.insert(professor);
 
-			// Professor professor = professorDAO.findById(1);
+			// Professor professor = professorDAO.findById(4);
 
 			// TurmaDAO turmaDAO = new TurmaDAO();
 			// Turma turma = new Turma();
-			// turma.setSemestre("2");
+			// turma.setSemestre("3");
 			// turma.setProfessor(professor);
 			// turmaDAO.insert(turma);
 
-			ResponsavelDAO responsavelDAO = new ResponsavelDAO();
-			Responsavel responsavel = new Responsavel();
-			responsavel.setNome("Rita de Cassia");
-			responsavel.setEndereco("rua Coronel Travasso, 30");
-			responsavelDAO.insert(responsavel);
+			// ResponsavelDAO responsavelDAO = new ResponsavelDAO();
+			// Responsavel responsavel = new Responsavel();
+			// responsavel.setNome("Rita de Cassia");
+			// responsavel.setEndereco("rua Coronel Travasso, 30");
+			// responsavelDAO.insert(responsavel);
 
 			// CursoDAO cursoDAO = new CursoDAO();
 			// Curso curso = new Curso();
@@ -69,11 +69,11 @@ public class App {
 			// curso.setCoordenador("Daniel Dalalana");
 			// cursoDAO.insert(curso);
 
-			// DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
-			// Disciplina disciplina = new Disciplina();
-			// disciplina.setNome("Programação I");
-			// disciplina.setCodigo("789585");
-			// disciplinaDAO.insert(disciplina);
+			DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
+			Disciplina disciplina = new Disciplina();
+			disciplina.setNome("Programação II");
+			disciplina.setCodigo("789785");
+			disciplinaDAO.insert(disciplina);
 			
 			
 		} catch (Exception e) {

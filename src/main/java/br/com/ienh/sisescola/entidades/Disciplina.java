@@ -1,9 +1,14 @@
 package br.com.ienh.sisescola.entidades;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +19,12 @@ public class Disciplina {
 	private int id;
 	private String nome;
     private String codigo;
+
+    @ManyToMany
+	@JoinTable(name="disciplina_turma", 
+			   joinColumns = @JoinColumn(name="disciplina_id"), 
+			   inverseJoinColumns = @JoinColumn(name="turma_id"))
+	private List<Turma> turmas;
 
     public int getId() {
         return id;
@@ -39,5 +50,12 @@ public class Disciplina {
         this.codigo = codigo;
     }
 
-    
+    public List<Turma> getTurmas() {
+        return turmas;
+    }
+
+    public void setTurmas(List<Turma> turmas) {
+        this.turmas = turmas;
+    }
+
 }
