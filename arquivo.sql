@@ -30,7 +30,7 @@ CREATE TABLE `aluno` (
   `endereco` varchar(40) DEFAULT NULL,
   `nascimento` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `aluno` (
 
 LOCK TABLES `aluno` WRITE;
 /*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
-INSERT INTO `aluno` VALUES (1,'Zé','0087626','00273652412','Nenhum','1974-10-05'),(2,'Ana','0072633','00228736251','Nenhum','2001-10-02'),(4,'Jovenal','7168185','54789563545','Rua Diamante, 40','2000-02-21'),(5,'Osvaldo','7162185','54789563545','Rua Ramalhetes, 80','2001-07-25'),(9,'Luna','2162185','54789593545','Rua Osvaldo Cruz, 80','2001-06-28'),(10,'Luna','2162185','54789593545','Rua Osvaldo Cruz, 80','2001-06-28'),(12,'Eduarda','2162735','04198579075','Rua Amantino Petefi, 45','2001-05-14');
+INSERT INTO `aluno` VALUES (1,'Zé','0087626','00273652412','Nenhum','1974-10-05'),(2,'Ana','0072633','00228736251','Nenhum','2001-10-02'),(4,'Jovenal','7168185','54789563545','Rua Diamante, 40','2000-02-21'),(5,'Osvaldo','7162185','54789563545','Rua Ramalhetes, 80','2001-07-25'),(9,'Luna','2162185','54789593545','Rua Osvaldo Cruz, 80','2001-06-28'),(12,'Eduarda','2162735','04198579075','Rua Amantino Petefi, 45','2001-05-14'),(14,'Carlos','2167735','04133579075','Rua Jabuti, 40','1985-05-10'),(18,'Andreia','2163835','98533579021','Rua 19 de novembro, 40','1998-07-30');
 /*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -66,6 +66,7 @@ CREATE TABLE `aluno_responsavel` (
 
 LOCK TABLES `aluno_responsavel` WRITE;
 /*!40000 ALTER TABLE `aluno_responsavel` DISABLE KEYS */;
+INSERT INTO `aluno_responsavel` VALUES (2,3);
 /*!40000 ALTER TABLE `aluno_responsavel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,6 +93,7 @@ CREATE TABLE `aluno_turma` (
 
 LOCK TABLES `aluno_turma` WRITE;
 /*!40000 ALTER TABLE `aluno_turma` DISABLE KEYS */;
+INSERT INTO `aluno_turma` VALUES (2,2),(14,2);
 /*!40000 ALTER TABLE `aluno_turma` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,7 +112,7 @@ CREATE TABLE `contato` (
   PRIMARY KEY (`id`),
   KEY `aluno_id` (`aluno_id`),
   CONSTRAINT `contato_ibfk_1` FOREIGN KEY (`aluno_id`) REFERENCES `aluno` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +121,7 @@ CREATE TABLE `contato` (
 
 LOCK TABLES `contato` WRITE;
 /*!40000 ALTER TABLE `contato` DISABLE KEYS */;
-INSERT INTO `contato` VALUES (1,'ze@gmail.com','email',1),(2,'(51) 996002114','telefone',1),(3,'ana@gmail.com','email',2),(4,'996869587','email',5);
+INSERT INTO `contato` VALUES (1,'ze@gmail.com','email',1),(2,'(51) 996002114','telefone',1),(3,'ana@gmail.com','email',2),(4,'996869587','email',5),(9,'992742828','telefone',18);
 /*!40000 ALTER TABLE `contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,7 +137,7 @@ CREATE TABLE `curso` (
   `nome` varchar(45) DEFAULT NULL,
   `coordenador` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,6 +146,7 @@ CREATE TABLE `curso` (
 
 LOCK TABLES `curso` WRITE;
 /*!40000 ALTER TABLE `curso` DISABLE KEYS */;
+INSERT INTO `curso` VALUES (1,'Analise e Desenvolvimento de Sistemas','Daniel Dalalana'),(2,'Redes de computadores','Cristiano');
 /*!40000 ALTER TABLE `curso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,6 +173,7 @@ CREATE TABLE `curso_disciplina` (
 
 LOCK TABLES `curso_disciplina` WRITE;
 /*!40000 ALTER TABLE `curso_disciplina` DISABLE KEYS */;
+INSERT INTO `curso_disciplina` VALUES (1,1);
 /*!40000 ALTER TABLE `curso_disciplina` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,7 +189,7 @@ CREATE TABLE `disciplina` (
   `nome` varchar(45) DEFAULT NULL,
   `codigo` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -194,6 +198,7 @@ CREATE TABLE `disciplina` (
 
 LOCK TABLES `disciplina` WRITE;
 /*!40000 ALTER TABLE `disciplina` DISABLE KEYS */;
+INSERT INTO `disciplina` VALUES (1,'Programação I','789585'),(2,'Programação II','789785'),(3,'Programação III','789885'),(4,'Desenvolvimento de software','782885');
 /*!40000 ALTER TABLE `disciplina` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,6 +225,7 @@ CREATE TABLE `disciplina_turma` (
 
 LOCK TABLES `disciplina_turma` WRITE;
 /*!40000 ALTER TABLE `disciplina_turma` DISABLE KEYS */;
+INSERT INTO `disciplina_turma` VALUES (1,3);
 /*!40000 ALTER TABLE `disciplina_turma` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -234,7 +240,7 @@ CREATE TABLE `professor` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,7 +249,7 @@ CREATE TABLE `professor` (
 
 LOCK TABLES `professor` WRITE;
 /*!40000 ALTER TABLE `professor` DISABLE KEYS */;
-INSERT INTO `professor` VALUES (1,'Tiago'),(2,'Andre'),(4,'Luis');
+INSERT INTO `professor` VALUES (1,'Tiago'),(2,'Andre'),(4,'Luis'),(5,'Jorge');
 /*!40000 ALTER TABLE `professor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,7 +265,7 @@ CREATE TABLE `responsavel` (
   `nome` varchar(45) DEFAULT NULL,
   `endereco` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,6 +274,7 @@ CREATE TABLE `responsavel` (
 
 LOCK TABLES `responsavel` WRITE;
 /*!40000 ALTER TABLE `responsavel` DISABLE KEYS */;
+INSERT INTO `responsavel` VALUES (1,'Maria de Lurdes','rua dos Andradas, 730'),(2,'Joao Antonio','rua dos Candelabros, 530'),(3,'Rita de Cassia','rua Coronel Travasso, 30'),(4,'Rita de Cassia','rua Coronel Travasso, 30'),(5,'Rita de Cassia','rua Coronel Travasso, 30'),(6,'Amanda de Cassia','rua Coronel Travasso, 35');
 /*!40000 ALTER TABLE `responsavel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,7 +290,7 @@ CREATE TABLE `turma` (
   `semestre` varchar(6) DEFAULT NULL,
   `professor_id` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -292,6 +299,7 @@ CREATE TABLE `turma` (
 
 LOCK TABLES `turma` WRITE;
 /*!40000 ALTER TABLE `turma` DISABLE KEYS */;
+INSERT INTO `turma` VALUES (1,'2',1),(2,'6',2),(3,'3',4),(4,'3',5);
 /*!40000 ALTER TABLE `turma` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -304,4 +312,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-04 22:07:43
+-- Dump completed on 2023-04-13 21:15:28
