@@ -26,14 +26,14 @@ public class App {
 		try {
 			// AlunoDAO alunoDAO = new AlunoDAO();
 			// Aluno aluno = new Aluno();
-			// aluno.setNome("Julia");
-			// aluno.setNumeroMatricula("2163235");
+			// aluno.setNome("Antonio");
+			// aluno.setNumeroMatricula("2164235");
 			// aluno.setCpf("98533579075");
-			// aluno.setEndereco("Rua 19 de novembro, 20");
-			// aluno.setNascimento(LocalDate.of(1999, 7, 30));
+			// aluno.setEndereco("Rua das oliveiras, 170");
+			// aluno.setNascimento(LocalDate.of(1999, 10, 20));
 			// alunoDAO.insert(aluno);
 
-			// Aluno aluno = alunoDAO.findById(14);
+			// Aluno aluno = alunoDAO.findById(12);
 
 			// ContatoDAO contatoDAO = new ContatoDAO();
 			// Contato contato = new Contato();
@@ -44,10 +44,10 @@ public class App {
 
 			// ProfessorDAO professorDAO = new ProfessorDAO();
 			// Professor professor = new Professor();
-			// professor.setNome("Joao");
+			// professor.setNome("Tiago");
 			// professorDAO.insert(professor);
 
-			// Professor professor = professorDAO.findById(4);
+			// Professor professor = professorDAO.findById(6);
 
 			// TurmaDAO turmaDAO = new TurmaDAO();
 			// Turma turma = new Turma();
@@ -73,59 +73,44 @@ public class App {
 			// disciplina.setCodigo("789885");
 			// disciplinaDAO.insert(disciplina);
 
-			// Intermediarias
+			// ##### Intermediarias #####
 
-			EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SisEscola");
-	    	EntityManager entityManager = entityManagerFactory.createEntityManager();
-
-			// aluno_turma
+			// ## aluno_turma ##
 			// TurmaDAO turmaDAO = new TurmaDAO();
-			// Turma turma = turmaDAO.findById(2);
+			// Turma turma = turmaDAO.findById(4);
 			
 			// AlunoDAO alunoDAO = new AlunoDAO();
-			// Aluno aluno = alunoDAO.findById(14);
+			// Aluno aluno = alunoDAO.findById(19);
 			// aluno.getTurmas().add(turma);
 
-			// entityManager.getTransaction().begin();
-			// entityManager.merge(aluno);
-			// entityManager.getTransaction().commit();
 
-			// aluno_responsavel
+			// ## aluno_responsavel ##
 			// AlunoDAO alunoDAO = new AlunoDAO();
 			// Aluno aluno = alunoDAO.findById(2);
 			
 			// ResponsavelDAO responsavelDAO = new ResponsavelDAO();
-			// Responsavel responsavel = responsavelDAO.findById(3);
+			// Responsavel responsavel = responsavelDAO.findById(7);
 			// responsavel.getAlunos().add(aluno);
 
-			// entityManager.getTransaction().begin();
-			// entityManager.merge(responsavel);
-			// entityManager.getTransaction().commit();
 
-			// disciplina_turma
+			// ## disciplina_turma ##
 			// DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
-			// Disciplina disciplina = disciplinaDAO.findById(1);
+			// Disciplina disciplina = disciplinaDAO.findById(4);
 			
 			// TurmaDAO turmaDAO = new TurmaDAO();
-			// Turma turma = turmaDAO.findById(3);
+			// Turma turma = turmaDAO.findById(4);
 			// turma.getDisciplinas().add(disciplina);
 
-			// entityManager.getTransaction().begin();
-			// entityManager.merge(turma);
-			// entityManager.getTransaction().commit();
 
-			// curso_disciplina
+			// ## curso_disciplina ##
 			// CursoDAO cursoDAO = new CursoDAO();
-			// Curso curso = cursoDAO.findById(1);
+			// Curso curso = cursoDAO.findById(2);
 
 			// DisciplinaDAO disciplinaDAO = new DisciplinaDAO();
-			// Disciplina disciplina = disciplinaDAO.findById(1);
+			// Disciplina disciplina = disciplinaDAO.findById(4);
 			// disciplina.getCursos().add(curso);
 
-			// entityManager.getTransaction().begin();
-			// entityManager.merge(disciplina);
-			// entityManager.getTransaction().commit();
-			
+
 		} catch (Exception e) {
 			System.out.println("Ops! Ocorreu um erro na conexão com o banco.");
 			e.printStackTrace();
